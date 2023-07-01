@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script defer src="script.js"></script>
+    <title>Library</title>
+  </head>
+  <body>
+    <div class="page-container">
+      <header>
+        <h1>LIBRARY</h1>
+        <div>
+          <button id="add-new-book" class="header-btn">+ ADD BOOK</button>
+          <button id="clear-all-books" class="header-btn">RESET</button>
+        </div>
+      </header>
+      <section class="books-display">
+        <div class="book-card book-card-read">
+          <h2 class="book-title">Moby Dick</h2>
+          <h3 class="book-author">Herman Melville</h3>
+          <!-- <p class="book-summary">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec pellentesque neque, et aliquet mauris. Nunc feugiat suscipit neque nec
+          vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas accumsan neque vitae ante
+          congue, vel ornare sapien mattis. Suspendisse ac diam ante.
+        </p> -->
+
+          <div>
+            <p class="book-page"><i class="fa-solid fa-book-open"></i> 120 Pages</p>
+          </div>
+
+          <div class="btn-container">
+            <button class="book-status-read">COMPLETED</button>
+            <button class="book-delete">❌ DELETE</button>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <h2>Copyright © 2023 Klaudio Mehmeti</h2>
+        <p>The Odin Project Exercise</p>
+      </footer>
+    </div>
+    <div class="modal-container">
+      <form id="form" action="" method="get">
+        <h2>Add a new book</h2>
+        <div class="input-form">
+          <label for="book_title">Book Title</label>
+          <input class="input-field" type="text" id="book_title" name="book_title" placeholder="Moby Dick.." required />
+        </div>
+        <div class="input-form">
+          <label for="author">Author</label>
+          <input class="input-field" type="text" id="author" name="author" placeholder="Herman Melville.." required />
+        </div>
+        <div class="input-form">
+          <label for="pages">Pages</label>
+          <input class="input-field" type="text" id="pages" name="pages" placeholder="120.." required />
+        </div>
+
+        <div class="input-form">
+          <label for="read">Did you read the book?</label>
+          <input class="input-field" type="checkbox" id="read" name="read" required />
+        </div>
+
+        <button class="modal-btn">SUBMIT</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,181 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --title-font-family: 'Oswald', sans-serif;
+  --text-font-family: 'Roboto', sans-serif;
+  --background-col: #e0e0e0;
+  --background-card-col: #ebebeb;
+  --button-color-green: #50c878;
+  --button-color-red: #ff4433;
+
+  --font-col-text: #666666;
+  --font-col-header: #333333;
+  --font-dash-col: rgb(255, 255, 255);
+
+  --box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  --size-ss: 10px;
+  --size-s: 20px;
+  --size-sm: 30px;
+  --size-m: 40px;
+  --size-l: 80px;
+  --size-xl: 120px;
+  --font-weight-bold: 300;
+  --font-weight-normal: 200;
+}
+
+.page-container {
+  /* filter: blur(2px); */
+  max-width: 80%;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  grid-template-rows: 1fr 10fr 1fr;
+  height: 100vh;
+  grid-gap: var(--size-sm);
+  padding: var(--size-m);
+  font-family: var(--text-font-family);
+  color: var(--font-col-text);
+  transition: opacity 0.7s ease;
+}
+/* Set a base font and size */
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--size-s);
+  padding: var(--size-s);
+}
+/* ----------modal-------  */
+.modal-container {
+  display: none;
+  background: white;
+  border-radius: var(--size-s);
+  box-shadow: var(--box-shadow);
+  padding: var(--size-sm);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: opacity 0.7s ease;
+}
+
+.input-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-bottom: var(--size-sm);
+}
+
+input {
+  border-radius: var(--size-ss);
+  background-color: var(--background-col);
+  min-height: var(--size-m);
+  border: none;
+}
+input::placeholder {
+  padding: 10px;
+}
+
+.modal-btn {
+  width: 100%;
+  max-height: 50px;
+  background-color: var(--button-color-green);
+}
+/* ---------------------  */
+
+.books-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+  /* grid-template-columns: repeat(5, 1fr); */
+  grid-gap: var(--size-m);
+  height: auto;
+}
+
+.book-card {
+  display: grid;
+  border-radius: var(--size-s);
+  box-shadow: var(--box-shadow);
+  padding: var(--size-sm);
+
+  grid-template-columns: 1fr;
+  max-height: 300px;
+}
+
+.book-card > :not(:nth-last-child(-n + 1)) {
+  padding-bottom: var(--size-s);
+}
+
+button {
+  min-width: 100px;
+  font-family: var(--title-font-family);
+  border-radius: var(--size-ss);
+  padding: var(--size-ss);
+  border: none;
+  height: 100%;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* ----------header-btn-------  */
+.header-btn {
+  max-width: 250px;
+  margin-left: var(--size-m);
+}
+
+.header-btn:first-child {
+  background-color: var(--button-color-green);
+}
+.header-btn:last-child {
+  background-color: var(--button-color-red);
+}
+/* ----------button status-------  */
+.book-status-read {
+  background-color: var(--button-color-green);
+}
+.book-status-unread {
+  background-color: var(--button-color-red);
+}
+/* ----------card status-------  */
+
+.book-card-read {
+  border-top: 5px solid var(--button-color-green);
+}
+
+.book-card-unread {
+  border-top: 5px solid var(--button-color-red);
+}
+
+/* -----------------  */
+
+p {
+  text-align: justify;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--title-font-family);
+  color: var(--font-col-header);
+}
+
+footer {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
