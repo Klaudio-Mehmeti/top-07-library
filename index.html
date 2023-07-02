@@ -19,21 +19,20 @@
     <div class="page-container">
       <header>
         <h1>LIBRARY</h1>
-        <div>
+        <div class="header-btn-container">
           <button id="add-new-book" class="header-btn">+ ADD BOOK</button>
           <button id="clear-all-books" class="header-btn">RESET</button>
         </div>
       </header>
       <section class="books-display">
-        <div class="book-card book-card-read">
+        <!-- <div class="book-card book-card-read">
           <h2 class="book-title">Moby Dick</h2>
           <h3 class="book-author">Herman Melville</h3>
-          <!-- <p class="book-summary">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec pellentesque neque, et aliquet mauris. Nunc feugiat suscipit neque nec
-          vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas accumsan neque vitae ante
-          congue, vel ornare sapien mattis. Suspendisse ac diam ante.
-        </p> -->
-
+          <p class="book-summary">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec pellentesque neque, et aliquet mauris. Nunc feugiat suscipit neque nec
+            vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas accumsan neque vitae ante
+            congue, vel ornare sapien mattis. Suspendisse ac diam ante.
+          </p>
           <div>
             <p class="book-page"><i class="fa-solid fa-book-open"></i> 120 Pages</p>
           </div>
@@ -42,7 +41,7 @@
             <button class="book-status-read">COMPLETED</button>
             <button class="book-delete">❌ DELETE</button>
           </div>
-        </div>
+        </div> -->
       </section>
 
       <footer>
@@ -63,15 +62,15 @@
         </div>
         <div class="input-form">
           <label for="pages">Pages</label>
-          <input class="input-field" type="text" id="pages" name="pages" placeholder="120.." required />
+          <input class="input-field" type="number" id="pages" name="pages" placeholder="120.." required />
         </div>
 
         <div class="input-form">
           <label for="read">Did you read the book?</label>
-          <input class="input-field" type="checkbox" id="read" name="read" required />
+          <input class="input-field" type="checkbox" id="read" name="read" />
         </div>
 
-        <button class="modal-btn">SUBMIT</button>
+        <button class="modal-btn" id="submit-btn">SUBMIT</button>
       </form>
     </div>
   </body>

@@ -30,10 +30,10 @@
 
 .page-container {
   /* filter: blur(2px); */
-  max-width: 80%;
+  max-width: 60%;
   margin: 0 auto;
   display: grid;
-  align-items: center;
+  align-items: start;
   grid-template-rows: 1fr 10fr 1fr;
   height: 100vh;
   grid-gap: var(--size-sm);
@@ -51,6 +51,19 @@ header {
   box-shadow: var(--box-shadow);
   border-radius: var(--size-s);
   padding: var(--size-s);
+}
+
+/* header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--size-s);
+  padding: var(--size-s);
+} */
+
+.header-btn-container {
+  display: flex;
+  justify-content: end;
 }
 /* ----------modal-------  */
 .modal-container {
@@ -90,14 +103,14 @@ input::placeholder {
   background-color: var(--button-color-green);
 }
 /* ---------------------  */
-
 .books-display {
   display: grid;
+  grid-auto-flow: dense;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
   /* grid-template-columns: repeat(5, 1fr); */
-  grid-gap: var(--size-m);
-  height: auto;
+  grid-gap: var(--size-s);
+  justify-items: stretch;
 }
 
 .book-card {
@@ -105,9 +118,8 @@ input::placeholder {
   border-radius: var(--size-s);
   box-shadow: var(--box-shadow);
   padding: var(--size-sm);
-
   grid-template-columns: 1fr;
-  max-height: 300px;
+  height: 300px;
 }
 
 .book-card > :not(:nth-last-child(-n + 1)) {
@@ -130,7 +142,7 @@ button {
 }
 /* ----------header-btn-------  */
 .header-btn {
-  max-width: 250px;
+  width: 150px;
   margin-left: var(--size-m);
 }
 
